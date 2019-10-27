@@ -1,0 +1,12 @@
+{
+  "extends": ["plugin:jest/recommended", "airbnb-typescript", "prettier"],
+  "plugins": ["prettier", "jest"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "no-param-reassign": ["error", {"props": false}]
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }    
+}

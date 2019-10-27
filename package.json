@@ -1,0 +1,42 @@
+{
+  "name": "messagebus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.20",
+    "@types/uuid": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "copyfiles": "^2.1.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-typescript": "^6.0.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.21.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "jest": "^24.9.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "uuid": "^3.3.3"
+  },
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:clean": "rimraf dist",
+    "build:tsc": "cross-env NODE_ENV=production tsc",
+    "build:packagejson": "copyfiles package.json dist",
+    "lint": "eslint --fix --ext .ts ./src",
+    "format": "prettier --write ./src/**/*.ts",
+    "test": "jest"
+  }
+}
